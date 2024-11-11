@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Lag et input hvor du kan skrive inn et tall, og en knapp man skal kunne trykke på for å få en beskjed på skjermen om tallet har en verdi som er høyere enn 5, og en annen beskjed 
+    om tallet er lavere enn 5. Er tallet AKKURAT 5, skal det komme en beskjed om at man har tippet riktig tall. Bytt så ut det hardkodede tallet 5 med et tilfeldig generert tall mellom 0 og 100 ved å bruke Math.Random().
+    Forsøk å trekke random tall genereringen ut i en egen funksjon med return -->
+<input onchange="number5(this.value)">
+<button onclick="checkNum()">Check Number</button>
+<script>
+let randomNum = Math.floor(Math.random()*10);
+let userInput = 0;
+
+function number5(numbers){
+  userInput = numbers;
+  
+}
+function checkNum(){
+  if(userInput > randomNum){ 
+   alert("Tallet er for høy!")
+  }
+  else if(userInput == randomNum)  {
+   alert("Tallet er riktig!")
+  }
+  else{
+   alert("Tallet er for liten!")
+  }
+
+}
+
+</script>
+
+</body>
+</html>
